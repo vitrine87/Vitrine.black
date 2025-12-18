@@ -1,0 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+/* CENA PRINCIPAL */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ESTRELA */
+.star {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: gold;
+}
+
+/* ÁRVORE */
+.tree {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tree span {
+  display: block;
+  margin: 6px auto;       /* CENTRALIZA O BLOCO */
+  color: #00ff6a;
+  font-size: 1.1rem;
+  text-align: center;     /* CENTRALIZA O TEXTO */
+  white-space: nowrap;
+  letter-spacing: 1px;
+  animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+
+.tree span:nth-child(1) { width: 140px; }
+.tree span:nth-child(2) { width: 220px; }
+.tree span:nth-child(3) { width: 300px; }
+.tree span:nth-child(4) { width: 380px; }
+
+
+/* BASE DA ÁRVORE */
+.base {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 200px;
+  height: 4px;
+  background: #00ff6a;
+  transform: translateX(-50%);
+}
+
+/* TEXTO FINAL */
+.message {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* NEVE */
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* BRILHO DO TEXTO */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ff6a;
+  }
+  to {
+    text-shadow: 0 0 15px #00ff6a, 0 0 25px #00ff6a;
+  }
+}
